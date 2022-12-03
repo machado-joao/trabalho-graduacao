@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: MediuN;
+  src: url("../assets/fonts/medium.otf");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ExtraN;
+  src: url("../assets/fonts/extra-bold-italic.otf");
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: Big;
+  src: url("../assets/fonts/the-bigger-the-better.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Iceland;
+  src: url("../assets/fonts/iceland-regular.ttf");
+  font-weight: 700;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #fff;
+  --body-bg: #f5f7fa;
+  --text-color: #fff;
+  --gray: #2028b3;
+  --gray-light: #cbd5e0;
+  --text-blue-800: rgb(30 64 175);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Iceland";
+}
+
+h1 {
+  font-family: "Iceland";
+}
+
+.menu {
+  @apply text-xl text-black justify-between;
+}
+
+a {
+  @apply text-blue-800;
+}
+
+a:hover {
+  @apply text-blue-800;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 2%;
+}
+
+.container {
+  @apply px-20;
+}
+
+.dropdown-link {
+  @apply flex p-2 text-xl relative z-20 text-blue-800 bg-white;
+}
+
+.dropdown-link:hover {
+  @apply text-white bg-blue-800;
+}
+
+button {
+  @apply rounded py-2 px-4 m-2 shadow outline-none;
+}
+
+.primary-button {
+  @apply rounded py-2 text-blue-800 m-2 px-4 shadow outline-none;
+}
+
+.default-button {
+  @apply rounded bg-red-700 py-2 px-4 text-white shadow outline-none;
+}
+
+button:hover,
+.primary-button:hover {
+  @apply bg-blue-800 text-white;
+}
+
+.default-button:hover {
+  @apply bg-red-900 text-white;
+}
+
+.card {
+  @apply mb-5 block rounded-lg border bg-white border-gray-200 shadow-md;
+  transition: 300ms ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.game-details {
+  @apply text-left m-1 cursor-text text-black;
+}
+
+.alert-error {
+  @apply my-3 rounded-lg bg-red-100 p-3 text-red-700 text-xl;
+}
+
+.alert-success {
+  @apply my-3 rounded-lg bg-green-100 p-3 text-green-700 text-xl;
+}
+
+.home_shrink {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.nav_shrink {
+  background-color: white !important;
+}
+
+.scroll-top.open {
+  bottom: 10%;
+}
+
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 105%;
+  right: 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  z-index: 999;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: 300ms ease;
+  border: none;
+  @apply bg-blue-800;
+}
+
+.vertical_img {
+  animation: updown 3s linear infinite;
+}
+
+.error_404 {
+  animation: leftright 7s linear infinite;
+}
+
+.selected-images {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin: 16px;
+  background-color: antiquewhite;
+}
+
+.rotate {
+  animation: rotate infinite 1s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes leftright {
+  0% {
+    transform: translateX(200px);
+  }
+
+  25% {
+    transform: translateX(400px);
+  }
+
+  75% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: var(dark);
+  }
+
+  body {
+    color: black;
+    background: var(--body-bg);
+  }
+}

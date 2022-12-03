@@ -1,0 +1,45 @@
+{
+  "name": "e-commerce-nextjs-fullstack",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:4000",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.1",
+    "@headlessui/react": "^1.7.2",
+    "@paypal/react-paypal-js": "^7.8.1",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^3.9.1",
+    "cloudinary": "^1.32.0",
+    "google-one-tap": "^1.0.6",
+    "js-cookie": "^3.0.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.6.1",
+    "next": "^12.2.5",
+    "next-auth": "^4.13.0",
+    "puppeteer": "^19.2.2",
+    "react": "18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.36.0",
+    "react-icons": "^4.6.0",
+    "react-toastify": "^9.0.8",
+    "react-tooltip": "^4.5.0",
+    "remixicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.20",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
